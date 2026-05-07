@@ -1,0 +1,30 @@
+﻿L'obiettivo è trasformare Hens in un software dove le classi gestiscono le regole e la libreria (es. ncurses) gestisce i disegni nel terminale.
+________________
+
+
+🧱 Architettura del Progetto (Le Classi)
+Prima di dividere i giorni, ecco cosa dovete costruire:
+1. Classe Carta: Contiene razza, uova, medaglie e il metodo disegna() per la TUI.
+2. Classe Mazzo: Gestisce il caricamento da file e la pesca delle carte.
+3. Classe Pollaio (Griglia): Una matrice 3x4 che valida il posizionamento.
+4. Classe MotoreGioco: Gestisce i turni, la TUI principale e il calcolo punti.
+________________
+
+
+📅 Cronoprogramma di 30 Giorni (Diviso per 4 Persone)
+Settimana 1: Le Fondamenta (Logica & Setup TUI)
+Obiettivo: Avere le classi base pronte e il terminale che visualizza i primi rettangoli.
+* Samuele (Data Manager): Crea la classe Carta e prepara il file di testo con i dati delle 72 galline.
+* Fernando (Grid Master): Crea la classe Pollaio (matrice 3x4) e la logica di adiacenza (posso mettere la carta X vicino alla carta Y?).
+* Ciocciolo (Game Logic): Crea la classe Mazzo e lo scheletro della classe Partita (gestione turni).
+* Andrea (TUI Lead): Configura ncurses, crea la finestra principale e scrive la funzione per disegnare un singolo "box" (la carta) a coordinate X,Y.
+________________
+
+
+Settimana 2: Sviluppo Modulare (Integrazione)
+Obiettivo: Muovere le carte nella griglia usando la tastiera.
+* Samuele: Implementa il metodo pesca() e la gestione degli scarti.
+* Fernando: Crea la logica di "connessione" (calcolare i gruppi di galline della stessa razza).
+* Io: Scrive il codice per la fase di gioco: "Pesca 2 -> Scegli 1 -> Scarta 1".
+* Andrea: Implementa l'input da tastiera (frecce direzionali) per spostare il cursore sulla griglia 3x4 della TUI.
+________________
